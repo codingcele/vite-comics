@@ -85,8 +85,9 @@ export default {
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 100px;
+    padding: 0px 200px 0px 200px;
 
     a {
         display: flex;
@@ -113,7 +114,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    font-size: 12px;
+                    font-size: 10px;
                     color: black;
                 }
             }
