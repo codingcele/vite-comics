@@ -1,5 +1,5 @@
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   name: "App",
@@ -16,4 +16,8 @@ export default {
 <style lang="scss">
 /* @use "./styles/partials/variables" as *;
 @use "./styles/general.scss" as *; */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
 </style>
