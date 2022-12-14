@@ -86,7 +86,7 @@ export default {
 header {
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 0px;
     padding: 0px 200px 0px 200px;
 
     a {
@@ -94,7 +94,7 @@ header {
         align-items: center;
 
         img {
-            height: 70px;
+            height: 60px;
         }
     }
 
