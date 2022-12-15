@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppHeader",
+    name: "AppLists",
     data() {
         return {
             links: [
@@ -61,61 +61,34 @@ export default {
 </script>
 
 <template>
-    <header>
-        <a href="/" class="brand">
-            <img src="../assets/images/dc-logo.png" alt="DC">
-        </a>
-
-        <div>
-            <ul>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :class="{ active: link.current }" :href="link.url">{{ link.text }}</a>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="left">
 
         </div>
-    </header>
+        <div class="right">
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 /* scoped serve a dire che il css si riferirà solo all'header */
-
-header {
+.container {
     display: flex;
     justify-content: space-between;
-    height: 12vh;
+    align-items: center;
+    height: 43vh;
+    background-image: url("../assets/images/footer-bg.jpg");
     padding: 0px 200px 0px 200px;
 
-    a {
-        display: flex;
-        align-items: center;
 
-        img {
-            height: 60px;
-        }
-    }
-
-    div {
-        display: flex;
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            padding: 0px;
-
-            li {
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-
-                a {
-                    text-decoration: none;
-                    font-size: 10px;
-                    color: black;
-                }
-            }
-        }
+    .right {
+        overflow: hidden;
+        height: 100%;
+        width: 65vh;
+        background-image: url("../assets/images/dc-logo-bg.png");
+        background-size: 65vh;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 </style>

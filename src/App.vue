@@ -2,6 +2,9 @@
 import AppHeader from './components/AppHeader.vue';
 import AppContent from './components/AppContent.vue';
 import AppMerchandise from './components/AppMerchandise.vue';
+import AppLists from './components/AppLists.vue';
+import AppLine from './components/AppLine.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: "App",
@@ -9,6 +12,10 @@ export default {
     AppHeader,
     AppContent,
     AppMerchandise,
+    AppLists,
+    AppFooter,
+    AppLine,
+
   }
 }
 
@@ -18,6 +25,9 @@ export default {
   <AppHeader />
   <AppContent />
   <AppMerchandise />
+  <AppLists />
+  <AppFooter />
+  <AppLine />
 </template>
 
 <style lang="scss">

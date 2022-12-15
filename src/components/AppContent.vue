@@ -19,7 +19,7 @@ export default {
 .content {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 14vh;
     padding: 0px 200px 0px 200px;
     background-color: rgb(28, 28, 28);
 }
