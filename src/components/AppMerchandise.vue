@@ -6,23 +6,19 @@ export default {
             links: [
                 {
                     text: "DIGITAL COMICS",
-                    source: "../assets/images/buy-comics-digital-comics.png",
+                    source: "./public/buy-comics-digital-comics.png",
                 },
                 {
                     text: "DC MERCHANDISE",
-                    source: "#",
+                    source: "./public/buy-comics-merchandise.png",
                 },
                 {
                     text: "SUBSCRIPTION",
-                    source: "#",
+                    source: "./public/buy-comics-subscriptions.png",
                 },
                 {
                     text: "COMIC SHOP LOCATOR",
-                    source: "#",
-                },
-                {
-                    text: "DC POWER VISA",
-                    source: "#",
+                    source: "./public/buy-comics-shop-locator.png",
                 },
             ],
         }
@@ -32,41 +28,44 @@ export default {
 
 <template>
     <div class="merchandise">
-        <ul>
-            <li v-for="(link, index) in links" :key="index">
-                <img :src="link.source" alt="">
-                <a :href="link.source">{{ link.text }}</a>
-            </li>
-        </ul>
+        <div v-for="(link, index) in links" :key="index">
+            <img :src="link.source" alt="" class="scale">
+            <a href="#">{{ link.text }}</a>
+        </div>
+        <div>
+            <img class="differentScale" src="/buy-dc-power-visa.svg" alt="">
+            <a href="#">DC POWER VISA</a>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-div {
+.merchandise {
     display: flex;
-    height: 16vh;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(2, 130, 249);
     padding: 0px 200px 0px 200px;
+    height: 16vh;
 
-    ul {
+    div {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-        list-style-type: none;
-        padding: 0px;
-
-        li {
-            display: flex;
-            align-items: center;
-            padding: 5px 10px;
-
-            a {
-                text-decoration: none;
-                font-size: 10px;
-                color: white;
-            }
-        }
+        align-items: center;
     }
+
+    .scale {
+        height: 40px;
+    }
+
+    .differentScale {
+        height: 25px;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    margin-left: 10px;
 }
 </style>

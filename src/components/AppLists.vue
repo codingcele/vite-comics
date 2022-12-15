@@ -77,7 +77,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 43vh;
-    background-image: url("../assets/images/footer-bg.jpg");
+    background-image: url("./public/footer-bg.jpg");
     padding: 0px 200px 0px 200px;
 
 
@@ -85,7 +85,7 @@ export default {
         overflow: hidden;
         height: 100%;
         width: 65vh;
-        background-image: url("../assets/images/dc-logo-bg.png");
+        background-image: url("./public/dc-logo-bg.png");
         background-size: 65vh;
         background-repeat: no-repeat;
         background-position: center;

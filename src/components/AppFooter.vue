@@ -5,19 +5,19 @@ export default {
         return {
             links: [
                 {
-                    source: "../assets/images/footer-facebook.png",
+                    source: "./public/footer-facebook.png",
                 },
                 {
-                    source: "../assets/images/footer-twitter.png",
+                    source: "./public/footer-twitter.png",
                 },
                 {
-                    source: "../assets/images/footer-youtube.png",
+                    source: "./public/footer-youtube.png",
                 },
                 {
-                    source: "../assets/images/footer-pinterest.png",
+                    source: "./public/footer-pinterest.png",
                 },
                 {
-                    source: "../assets/images/footer-periscope.png",
+                    source: "./public/footer-periscope.png",
                 },
             ],
         }
@@ -27,14 +27,16 @@ export default {
 
 <template>
     <div class="container">
-        <div class="leftFooter">
+        <a href="#" class="leftFooter">
             SIGN-UP NOW!
-        </div>
+        </a>
         <div class="rightFooter">
-            <div class="follow">
-                FOLLOW US
+            <div>
+                <a href="#">FOLLOW US</a>
             </div>
-            <img v-for="(link, index) in links" :key="index" :src=link.source alt="">
+            <a href="#" v-for="(link, index) in links" :key="index">
+                <img :src="link.source" alt="">
+            </a>
         </div>
     </div>
 </template>
@@ -61,9 +63,22 @@ export default {
         align-items: center;
 
         div {
-            font-weight: bold;
-            color: rgb(0, 134, 255);
+            margin: 15px;
+
+            a {
+                font-weight: bold;
+                color: rgb(0, 134, 255);
+            }
+        }
+
+        img {
+            height: 25px;
+            margin: 7px;
         }
     }
+}
+
+a {
+    text-decoration: none;
 }
 </style>

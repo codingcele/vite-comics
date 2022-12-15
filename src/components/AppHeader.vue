@@ -3,6 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
+            source: "./public/dc-logo.png",
             links: [
                 {
                     text: "CHARACTERS",
@@ -63,7 +64,7 @@ export default {
 <template>
     <header>
         <a href="/" class="brand">
-            <img src="../assets/images/dc-logo.png" alt="DC">
+            <img :src="this.source" alt="DC">
         </a>
 
         <div>
@@ -89,6 +90,9 @@ header {
     a {
         display: flex;
         align-items: center;
+        text-decoration: none;
+        font-size: 10px;
+        color: black;
 
         img {
             height: 60px;
@@ -108,12 +112,6 @@ header {
                 display: flex;
                 align-items: center;
                 padding: 5px 10px;
-
-                a {
-                    text-decoration: none;
-                    font-size: 10px;
-                    color: black;
-                }
             }
         }
     }
