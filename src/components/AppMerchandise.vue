@@ -28,14 +28,14 @@ export default {
 
 <template>
     <div class="merchandise">
-        <div v-for="(link, index) in links" :key="index">
+        <a href="/" v-for="(link, index) in links" :key="index">
             <img :src="link.source" alt="" class="scale">
-            <a href="#">{{ link.text }}</a>
-        </div>
-        <div>
+            <span href="#">{{ link.text }}</span>
+        </a>
+        <a href="/">
             <img class="differentScale" src="/buy-dc-power-visa.svg" alt="">
-            <a href="#">DC POWER VISA</a>
-        </div>
+            <span href="#">DC POWER VISA</span>
+        </a>
     </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
     padding: 0px 200px 0px 200px;
     height: 16vh;
 
-    div {
+    a {
         display: flex;
         align-items: center;
     }
@@ -66,6 +66,9 @@ a {
     text-decoration: none;
     font-size: 10px;
     color: white;
+}
+
+span {
     margin-left: 10px;
 }
 </style>
