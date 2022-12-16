@@ -6,19 +6,19 @@ export default {
             links: [
                 {
                     text: "DIGITAL COMICS",
-                    source: "./public/buy-comics-digital-comics.png",
+                    source: "/buy-comics-digital-comics.png",
                 },
                 {
                     text: "DC MERCHANDISE",
-                    source: "./public/buy-comics-merchandise.png",
+                    source: "/buy-comics-merchandise.png",
                 },
                 {
                     text: "SUBSCRIPTION",
-                    source: "./public/buy-comics-subscriptions.png",
+                    source: "/buy-comics-subscriptions.png",
                 },
                 {
                     text: "COMIC SHOP LOCATOR",
-                    source: "./public/buy-comics-shop-locator.png",
+                    source: "/buy-comics-shop-locator.png",
                 },
             ],
         }
@@ -33,7 +33,7 @@ export default {
             <span href="#">{{ link.text }}</span>
         </a>
         <a href="/">
-            <img class="differentScale" src="/buy-dc-power-visa.svg" alt="">
+            <img class="differentScale" src="../assets/buy-dc-power-visa.svg" alt="">
             <span href="#">DC POWER VISA</span>
         </a>
     </div>

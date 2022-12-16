@@ -3,7 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
-            source: "./public/dc-logo.png",
+            source: "/dc-logo.png",
             links: [
                 {
                     text: "CHARACTERS",

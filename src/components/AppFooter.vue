@@ -5,19 +5,19 @@ export default {
         return {
             links: [
                 {
-                    source: "./public/footer-facebook.png",
+                    source: "/footer-facebook.png",
                 },
                 {
-                    source: "./public/footer-twitter.png",
+                    source: "/footer-twitter.png",
                 },
                 {
-                    source: "./public/footer-youtube.png",
+                    source: "/footer-youtube.png",
                 },
                 {
-                    source: "./public/footer-pinterest.png",
+                    source: "/footer-pinterest.png",
                 },
                 {
-                    source: "./public/footer-periscope.png",
+                    source: "/footer-periscope.png",
                 },
             ],
         }
@@ -71,9 +71,12 @@ export default {
             }
         }
 
+        a {
+            margin: 7px;
+        }
+
         img {
             height: 25px;
-            margin: 7px;
         }
     }
 }
