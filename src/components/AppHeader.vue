@@ -13,7 +13,7 @@ export default {
                 {
                     text: "COMICS",
                     url: "#",
-                    current: true,
+                    current: false,
                 },
                 {
                     text: "MOVIES",
@@ -57,8 +57,22 @@ export default {
                 },
             ],
         }
+    },
+    methods: {
+        clicked(index) {
+            let i = 0;
+            while (i < this.links.length) {
+                if (index != i) {
+                    this.links[i].current = false;
+                }
+                i++;
+            }
+            this.links[index].current = true;
+            console.log(this.links[index].current);
+        },
     }
 }
+
 </script>
 
 <template>
@@ -68,9 +82,10 @@ export default {
         </a>
 
         <div>
-            <ul>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :class="{ active: link.current }" :href="link.url">{{ link.text }}</a>
+            <ul id="changeColor">
+                <li v-for="(link, index) in links" :key="index" @click="clicked(index)"
+                    :class="{ lowborder: this.links[index].current }">
+                    <a :class="{ click: this.links[index].current }" :href="link.url">{{ link.text }}</a>
                 </li>
             </ul>
 
@@ -112,8 +127,18 @@ header {
                 display: flex;
                 align-items: center;
                 padding: 5px 10px;
+                cursor: pointer;
+                margin-left: 5px;
             }
         }
     }
+}
+
+.click {
+    color: rgb(2, 130, 249);
+}
+
+.lowborder {
+    border-bottom: 4px solid rgb(2, 130, 249);
 }
 </style>

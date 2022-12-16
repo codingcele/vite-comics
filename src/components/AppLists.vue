@@ -82,12 +82,10 @@ export default {
 
 
     .right {
-        overflow: hidden;
         height: 100%;
         width: 65vh;
         background-image: url("./public/dc-logo-bg.png");
         background-size: 65vh;
-        background-repeat: no-repeat;
         background-position: center;
     }
 }
