@@ -3,58 +3,153 @@ export default {
     name: "AppLists",
     data() {
         return {
-            links: [
+            categories: [
                 {
-                    text: "CHARACTERS",
-                    url: "#",
-                    current: false,
+                    title: "DC COMICS",
+                    links: [
+                        {
+                            text: "Characters",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Comics",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Movies",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "TV",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Games",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Videos",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "News",
+                            url: "#",
+                            current: false,
+                        },
+                    ],
                 },
                 {
-                    text: "COMICS",
-                    url: "#",
-                    current: true,
+                    title: "SHOP",
+                    links: [
+                        {
+                            text: "Shop DC",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Shop DC Collectibles",
+                            url: "#",
+                            current: false,
+                        },
+                    ],
                 },
                 {
-                    text: "MOVIES",
-                    url: "#",
-                    current: false,
+                    title: "DC",
+                    links: [
+                        {
+                            text: "Terms Of Use",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Privacy policy (New)",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Ad Choices",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Advertising",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Jobs",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Subscriptions",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Talent Workshops",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "CPSC Certificates",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Ratings",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Shop Help",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "Contact Us",
+                            url: "#",
+                            current: false,
+                        },
+                    ],
                 },
                 {
-                    text: "TV",
-                    url: "#",
-                    current: false,
+                    title: "SITES",
+                    links: [
+                        {
+                            text: "DC",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "MAD Magazine",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "DC Kids",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "DC Universe",
+                            url: "#",
+                            current: false,
+                        },
+                        {
+                            text: "DC Power Visa",
+                            url: "#",
+                            current: false,
+                        },
+                    ],
                 },
-                {
-                    text: "GAMES",
-                    url: "#",
-                    current: false,
-                },
-                {
-                    text: "COLLECTIBLES",
-                    url: "#",
-                    current: false,
-                },
-                {
-                    text: "VIDEOS",
-                    url: "#",
-                    current: false,
-                },
-                {
-                    text: "FANS",
-                    url: "#",
-                    current: false,
-                },
-                {
-                    text: "NEWS",
-                    url: "#",
-                    current: false,
-                },
-                {
-                    text: "SHOP",
-                    url: "#",
-                    current: false,
-                },
-            ],
+            ]
         }
     }
 }
@@ -63,7 +158,18 @@ export default {
 <template>
     <div class="container">
         <div class="left">
-
+            <div v-for="(category, index) in categories" :key="index" class="list">
+                <div class="titleContainer">
+                    <a href="/" class="title">
+                        {{ category.title }}
+                    </a>
+                </div>
+                <div v-for="(link, index) in category.links" :key="index">
+                    <a href="/" class="item">
+                        {{ link.text }}
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="right">
         </div>
@@ -80,6 +186,37 @@ export default {
     background-image: url("./public/footer-bg.jpg");
     padding: 0px 200px 0px 200px;
 
+    .left {
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        width: calc(100% - 45vh - 400px);
+        flex-wrap: wrap;
+
+        .list {
+            margin-right: 30px;
+            margin-bottom: 15px;
+
+            .titleContainer {
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                .title {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+
+            .item {
+                font-size: 10px;
+                color: gray;
+                margin-bottom: 2px;
+            }
+        }
+
+    }
 
     .right {
         height: 100%;
@@ -88,5 +225,9 @@ export default {
         background-size: 65vh;
         background-position: center;
     }
+}
+
+a {
+    text-decoration: none;
 }
 </style>
